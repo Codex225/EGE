@@ -1,12 +1,14 @@
 from functools import *
 
-@lru_cache(maxsize=None)
-def f(start, end):
-    if start == end:
-        return 1
-    elif start > end:
-        return 0
-    else:
-        return f(start + 1, end) + f(start * 5, end)
 
-print(f(3, 30) * f(30, 68))
+#import sys
+#sys.setrecursionlimit(10**6)
+
+@lru_cache(None)
+
+def F(n):
+    if n == 1: return 1
+    else: return n * F(n - 1)
+
+
+print((F(2024) - F(2023))//F(2022))
