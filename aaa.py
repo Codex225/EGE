@@ -1,14 +1,14 @@
-from functools import *
+def ss(a, base):
+    res = []
+    while a != 0:
+        res.append(a % base)
+        a //= base
+    return res[::-1]
 
-
-#import sys
-#sys.setrecursionlimit(10**6)
-
-@lru_cache(None)
-
-def F(n):
-    if n == 1: return 1
-    else: return n * F(n - 1)
-
-
-print((F(2024) - F(2023))//F(2022))
+res = []
+for x in range(11501):
+    a = 7**270 + 7 ** 170 + 7 *70 -x
+    a7 = ss(a, 7)
+    res.append([a7.count(0), x])
+res.sort()
+print(max(res))
