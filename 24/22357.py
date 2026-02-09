@@ -12,8 +12,9 @@ for i in range(len(s)):
         str = s[i : j + 1]
         if "*" not in str and str[0] != "0" and int(str, 14) % 2 == 0:
             m = max(m, len(str))
+            print(m)
             if len(str) == 112:
-                print(str, i)
+                 print(str, i)
         elif str[0] == "0" or "*" in str:
             break
     # if i % 100_000 == 0:
