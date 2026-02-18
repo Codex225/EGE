@@ -11,6 +11,7 @@ def fn(n):
     if n > 1:
         m += [n]
     return m
+print(fn(12))
 
 for n in range(15_381_265, 15_385_000):
     m = fn(n)
