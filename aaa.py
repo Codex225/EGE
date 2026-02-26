@@ -1,10 +1,7 @@
-for a in range(1, 100000):
-    flag = True
-    for x in range(1, 40000):
-        for y in range(1, 40000):
+from ipaddress import ip_network
 
-            f = (3 *x + 4 * y) or (y < x - 1222) or (y > a)
-            if f == 0:
-                flag = False
-                break
-    if flag: print(a)
+net = ip_network("192.168.1.0/24")
+for address in net:
+    ds = int(address)
+    print(ds, type(ds))
+print(net)
