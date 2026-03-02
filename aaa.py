@@ -1,7 +1,3 @@
-from ipaddress import ip_network
-
-net = ip_network("192.168.1.0/24")
-for address in net:
-    ds = int(address)
-    print(ds, type(ds))
-print(net)
+for x in range(3, 100):
+    if 53 % x == 3:
+        print(x)
