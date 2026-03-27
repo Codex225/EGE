@@ -9,7 +9,7 @@ s = f.readline().strip()
 # pprint(s)
 q = 0
 for i in range(len(s) - 17):
-    for j in range(i +17, i):
+    for j in range(i +17, len(s)):
         res = s[i: j+1]
         if res[0] == "A" and res[-1] == "A" and ("A" not in res[1:-1]) and "B" not in res:
             q += 1
