@@ -1,3 +1,5 @@
+#простая, можно в экселе решить
+
 f = open("26_24.txt", "r")
 
 S, N = [int(x) for x in f.readline().split()]
