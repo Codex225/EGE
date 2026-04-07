@@ -11,6 +11,7 @@ for s in f:
     else:
         data.append([okr, "o", num])
 data.sort()
+print(data)
 lenta = [0] * n
 k1 = 0
 k2 = -1
