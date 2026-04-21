@@ -3,7 +3,7 @@ res = []
 f = open("24_4602.txt")
 s = f.read().strip()
 pat = r"([BCD][AO])+"
-reg = rf"(?=({pat}))" #используем для страховки от пересечений
+reg = rf"(?=({pat}))" #используем для страховки от пересечений (опережающий или позитивный просмотр вперед)
 for s1 in finditer(reg, s):
     res.append(len(s1[1]))
 print(max(res) // 2)
