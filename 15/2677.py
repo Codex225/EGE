@@ -1,11 +1,11 @@
 def f(x):
     D = 12 <= x <= 20
-    Q = 31 <= x <= 45
+    C = 31 <= x <= 45
     A = a1 <= x <= a2
-    return (P == Q) <= (not A)
+    return (not C) and (not D) or ((D or C) <= A)
 
 dots = []
-for i in (3, 15, 14, 25):
+for i in (12, 20, 31, 45):
     dots.append(i)
     dots.append(i + 0.1)
     dots.append(i - 0.1)
