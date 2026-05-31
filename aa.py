@@ -1,35 +1,18 @@
-class Dog:
-    def __init__(self, name):
-        self.name = name
-        self.k1 = self.k2 = self.k3 = 0
+class Pencil:
+    def write(self, line):
+        return line.lower()
 
-    def voice(self):
-        if self.k1 == 2:
-            return "Гав"
-        self.k1 += 1
-        return f"Голос {self.k1}"
+class Pen:
+    def write(self, line):
+        return line.title()
 
-    def leg(self):
-        if self.k2 == 4:
-            return f"Хороший {self.name}"
-        self.k2 += 1
-        return f"К ноге {self.k2}"
+class Marker:
+    def write(self, line):
+        return line.upper()
 
-    def sit(self):
-        if self.k3 == 3:
-            return f"Сидит хороший {self.name}"
-        self.k3 += 1
-        return f"Сидеть{self.k3}"
-
-
-dog = Dog('Рекс')
-print(dog.voice())
-print(dog.voice())
-print(dog.leg())
-print(dog.sit())
-print(dog.sit())
-print(dog.voice())
-print(dog.sit())
-print(dog.sit())
-print(dog.voice())
-
+pencil = Pencil()
+print(pencil.write('Тема сегодняшнего урока: Полиморфизм'))
+pen = Pen()
+print(pen.write('Тема сегодняшнего урока: Полиморфизм'))
+marker = Marker()
+print(marker.write('Тема сегодняшнего урока: Полиморфизм'))
