@@ -1,18 +1,27 @@
-class Pencil:
-    def write(self, line):
-        return line.lower()
+class Platypus:
+    def __init__(self, name):
+        self.name = name
 
-class Pen:
-    def write(self, line):
-        return line.title()
+    def get_name(self):
+        return f"Меня зовут {self.name}"
 
-class Marker:
-    def write(self, line):
-        return line.upper()
+    def make_sound(self):
+        return f"{self.name} издаёт звук: Кря-кря!"
 
-pencil = Pencil()
-print(pencil.write('Тема сегодняшнего урока: Полиморфизм'))
-pen = Pen()
-print(pen.write('Тема сегодняшнего урока: Полиморфизм'))
-marker = Marker()
-print(marker.write('Тема сегодняшнего урока: Полиморфизм'))
+
+class BabyPlatypus(Platypus):
+    def __init__(self, name, weight):
+        super().__init__(name)
+        self.weight = weight
+
+    def get_weight(self):
+        return f"Мой вес: {self.weight} грамм"
+
+    def make_sound(self):
+        return f"{self.name} пищит: Пи-пи!"
+
+
+adult = Platypus("Перри")
+print(adult.make_sound())
+baby = BabyPlatypus("Малыш", 500)
+print(baby.make_sound())
